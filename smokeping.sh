@@ -69,6 +69,7 @@ Configure_SomkePing(){
 	rm -rf config*
 	wget -O config https://raw.githubusercontent.com/ILLKX/smokeping-onekey/master/config
 	wget -O /opt/smokeping/lib/Smokeping/Graphs.pm https://raw.githubusercontent.com/ILLKX/smokeping-onekey/master/Graphs.pm
+	sed -i "1648s/die/print/" /opt/smokeping/lib/Smokeping.pm
 	chmod 600 /opt/smokeping/etc/smokeping_secrets.dist
 }
 
